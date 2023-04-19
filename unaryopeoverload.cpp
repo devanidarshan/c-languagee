@@ -14,22 +14,22 @@ class box
     {
         return l*w*h;
     }
-    box operator+(box &n)
+    box operator-- (int)
     {
         box t;
-        t.l=l+n.l;
-        t.w=w+n.w;
-        t.h=h+n.h;
+        t.l=l--;
+        t.w=w--;
+        t.h=h--;
         return t;
     }
 };
 int main()
 {   
-    box a,b,c;
-    a.setdata(2,2,2);
+    box a,b;
+    a.setdata(7,7,7);
     cout<<"Volume of box A is: "<<a.getdata()<<endl;
-    b.setdata(3,3,3);
+    a--;
+    b=a;
     cout<<"Volume of box B is: "<<b.getdata()<<endl;
-    c=a+b;
-    cout<<"Volume of box C is: "<<c.getdata()<<endl;  
+      
 }
