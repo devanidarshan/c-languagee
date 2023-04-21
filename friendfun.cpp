@@ -21,7 +21,7 @@ class box
     box sum (box a,box c,box x)
     {
         box t;
-        t.l=a.l+c.l+x.l;
+        t.l=a.l+c.l+x.l; 
         t.b=a.b+c.b+x.b;
         return t;
     }
