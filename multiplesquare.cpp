@@ -3,12 +3,13 @@ using namespace std;
 class base1
 {
     protected :
-    int n;
+    int n,i;
      
     public:
-    void setn(int x)
+    void setn()
     {
-       n=x;
+       cout<<"enter the n : ";
+       cin>>n;
     }
 
 };
@@ -19,18 +20,23 @@ class base2
     int m;
      
     public:
-    void setm(int x)
+    void setm()
     {
-       m=x;
+       cout<<"enter the m : ";
+       cin>>m;
     }
 
 };
 class derived : public base1 ,public base2
 {
     public:
-    void mul()
+    void square()
     {
-        cout<<"Multiplication of m and n is:  "<<m*n<<endl;
+       for(i=m;i<n;i++)
+      
+       {
+        cout<<" "<<i*i<<endl;
+       }
     }
     
 };
@@ -38,7 +44,7 @@ class derived : public base1 ,public base2
 int main()
 {
     derived d;
-    d.setn(10);
-    d.setm(50);
-    d.mul();
+    d.setn();
+    d.setm();
+    d.square();
 }
