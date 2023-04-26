@@ -42,7 +42,7 @@ class derived : public base1 ,public base2
 };
 
 int main()
-{
+{`
     derived d;
     d.setn();
     d.setm();
